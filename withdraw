@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class ATM {
+
+    public static void main(String[] args) {
+        // Ask the user for an amount
+		System.out.println("How much would you like to withdraw?" );
+		System.out.println("1) £10 2) £20 3) £30 4) £50");
+		// Accept user selection
+		String selection;
+		Scanner in = new Scanner(System.in);
+		selection = in.nextLine();
+		
+		switch(selection)
+		{
+
+			case "1": System.out.println("*System gives £10*");
+			break;
+			case "2": System.out.println("*System gives £20*");
+			break;
+			case "3": System.out.println("*System gives £30*");
+			break;
+			case "4": System.out.println("*System gives £50*");
+			break;
+			default: System.out.println("Invalid selection!\n");
+			break;
+		}
+		//System.out.println(selection);
+		// Prompt for reciept
+		// Output Cash and or Reciept
+		//System.out.println("Hello, World");
+    }
+	
+	public static void withdrawCash() {
+		// Ask the user for an amount
+		//System.out.Println("How much would you like to withdraw? \n blabal" )
+		// Accept user selection
+		// Prompt for reciept
+		// Output Cash and or Reciept
+	}
+
+}
