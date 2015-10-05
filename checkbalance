@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class hi
+{
+	public static void main(String[] args)
+	{
+		Scanner in = new Scanner(System.in);
+		double balance1 = 345.45;
+		int choice = 0;
+		System.out.println("Enter 1 to get balance");
+		choice = in.nextInt();
+		if(choice == 1)
+		{
+			System.out.println(balance1);
+		}
+		else
+		{
+			System.out.println("Incorrect imput");
+		}
+		
+		
+
+	}
+}
