@@ -1,0 +1,139 @@
+import java.util.Scanner;
+
+public class pincheck 
+{
+	static double balance1 = 345.54;
+	public static void main (String[] args){
+		
+		int correctPin = 1234;
+		int choice = 0000;
+		int tryCount = 0;
+		int userChoice = 0;
+		
+		
+		Scanner pinCheck = new Scanner(System.in);
+		Scanner userEntered = new Scanner(System.in);
+		
+		
+		while(tryCount != 3 && choice != correctPin)
+		{
+			System.out.println ("Please Enter Your Pin");
+			choice = pinCheck.nextInt();
+		
+			if (choice == correctPin){
+			
+			System.out.println ("correct Pin");
+						
+			}
+			else			
+			{
+			System.out.println("Incorrect Pin Try Again");
+			tryCount ++;			
+			}	
+		
+		}
+		if (tryCount == 3)
+		{
+			System.out.println("Too Many Failed Attempts Contact Bank");
+		}
+		
+		
+	
+		System.out.println("Welcome to Main Screen");
+			
+			while (userChoice !=4){
+			System.out.println("1: Check Balance \t  2: Withdraw Cash \n3: deposit Cash/Cheque    4:Exit");
+			userChoice = userEntered.nextInt();
+		switch (userChoice)
+		{
+			case 1: 			
+			System.out.println(balance1);	
+			break;
+			
+			case 2: withdrawBalance();
+			break;
+			
+			case 3:depositCash();
+			break;
+			
+			case 4:
+			break;
+		}
+	 }
+		
+	}
+	
+	
+	public static void withdrawBalance() {
+		
+		 // Ask the user for an amount
+		System.out.println("How much would you like to withdraw?" );
+		System.out.println("1) £10 2) £20 3) £30 4) £50");
+		// Accept user selection
+		String selection;
+		Scanner in = new Scanner(System.in);
+		selection = in.nextLine();
+		
+		switch(selection)
+		{
+
+			case "1": System.out.println("*System gives £10*");
+			balance1 -= 10;
+			break;
+			case "2": System.out.println("*System gives £20*");
+			balance1 -= 20;
+			break;
+			case "3": System.out.println("*System gives £30*");
+			balance1 -= 30;
+			break;
+			case "4": System.out.println("*System gives £50*");
+			balance1 -= 50;
+			break;
+			default: System.out.println("Invalid selection!\n");
+			break;
+		}
+		//System.out.println(selection);
+		// Prompt for reciept
+		// Output Cash and or Reciept
+		//System.out.println("Hello, World");
+    }
+	
+	public static void withdrawCash() {
+		// Ask the user for an amount
+		//System.out.Println("How much would you like to withdraw? \n blabal" )
+		// Accept user selection
+		// Prompt for reciept
+		// Output Cash and or Reciept
+	}
+	
+	public static void depositCash(){
+
+//Prompt User to insert Cash
+System.out.println("Please enter amount you wish to deposit.");
+//Prompt user for amount entered
+		Double selection;
+		Scanner in = new Scanner(System.in);
+		selection = in.nextDouble();
+		int fail = 0;
+		
+				
+		if (fail <= 0)
+		{
+			//Amount is added to user balance
+			balance1 += selection;
+			System.out.println("£" + selection +" was added to your account");
+			//Offer user a reciept
+			System.out.println("*System prints a reciept*");
+			
+		}
+		else
+		{
+			// Tell user an error has occured
+			System.out.println("An error has occured. Please try again or seek help. Invalid Input");
+		}
+		
+		
+		
+
+}
+}
