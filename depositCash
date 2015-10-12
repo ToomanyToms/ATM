@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class depositCash {
+
+	public static void main(String[] args) {
+ 
+	depositCash();
+ 
+	}
+
+public static void depositCash(){
+
+//Prompt User to insert Cash
+System.out.println("Please enter amount you wish to deposit.");
+//Prompt user for amount entered
+		String selection;
+		Scanner in = new Scanner(System.in);
+		selection = in.nextLine();
+		int fail = 0;
+		
+		for (char c : selection.toCharArray())
+		{
+			//System.out.println(c);
+			if (!Character.isDigit(c))
+			{
+					fail++;			
+			}
+		}
+		
+		if (fail <= 0)
+		{
+			//Amount is added to user balance
+			System.out.println("£" + selection +" was added to your account");
+			//Offer user a reciept
+			System.out.println("*System prints a reciept*");
+			
+		}
+		else
+		{
+			// Tell user an error has occured
+			System.out.println("An error has occured. Please try again or seek help. Invalid Input");
+		}
+		
+		
+		
+
+}
+	
+}
