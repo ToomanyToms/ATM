@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class pincheck 
+{
+	
+	public static void main (String[] args){
+		
+		int correctPin = 1234;
+		int choice = 0000;
+		int tryCount = 0;
+		
+		Scanner pinCheck = new Scanner(System.in);		
+		
+		
+		while(tryCount != 3 && choice != correctPin)
+		{
+			System.out.println ("Please Enter Your Pin");
+			choice = pinCheck.nextInt();
+		
+			if (choice == correctPin){
+			
+			System.out.println ("correct Pin");
+						
+			}
+			else			
+			{
+			System.out.println("Incorrect Pin Try Again");
+			tryCount ++;			
+			}	
+		
+		}
+		if (tryCount == 3)
+		{
+			System.out.println("Too Many Failed Attempts Contact Bank");
+		}
+		else
+		{
+			System.out.println("Welcome to Main Screen");
+		}
+		
+	}
+	
+	
+	
+}
